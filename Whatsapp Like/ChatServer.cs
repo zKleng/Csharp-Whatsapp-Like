@@ -1,5 +1,5 @@
 using System;
-using System.Collections.Generic;
+using System.Collections.Concurrent;
 using System.Net;
 using System.Net.Sockets;
 using System.Text;
@@ -8,7 +8,7 @@ using System.Threading.Tasks;
 public class ChatServer
 {
     private TcpListener _listener;
-    private List<TcpClient> _clients = new List<TcpClient>();
+    private ConcurrentBag<TcpClient> _clients = new ConcurrentBag<TcpClient>();
 
     public ChatServer(int port)
     {
@@ -23,19 +23,46 @@ public class ChatServer
         while (true)
         {
             var client = await _listener.AcceptTcpClientAsync();
-            _clients.Add(client);
-            _ = Task.Run(() => HandleClientAsync(client));
+            if (client != null)
+            {
+                _clients.Add(client);
+                _ = Task.Run(() => HandleClientAsync(client));
+            }
         }
     }
 
     private async Task HandleClientAsync(TcpClient client)
     {
         var buffer = new byte[1024];
-        var stream = client.GetStream();
+        NetworkStream? stream = null;
+
+        try
+        {
+            stream = client.GetStream();
+        }
+        catch (Exception ex)
+        {
+            Console.WriteLine($"Error obteniendo el stream: {ex.Message}");
+        }
+
+        if (stream == null)
+        {
+            return;
+        }
 
         while (true)
         {
-            var byteCount = await stream.ReadAsync(buffer, 0, buffer.Length);
+            int byteCount;
+            try
+            {
+                byteCount = await stream.ReadAsync(buffer, 0, buffer.Length);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine($"Error leyendo del stream: {ex.Message}");
+                break;
+            }
+
             if (byteCount == 0)
                 break;
 
@@ -44,8 +71,8 @@ public class ChatServer
             await BroadcastMessageAsync(message, client);
         }
 
-        _clients.Remove(client);
-        client.Close();
+        _clients.TryTake(out var removedClient);
+        removedClient?.Close();
     }
 
     private async Task BroadcastMessageAsync(string message, TcpClient excludeClient)
@@ -55,8 +82,27 @@ public class ChatServer
         {
             if (client != excludeClient)
             {
-                var stream = client.GetStream();
-                await stream.WriteAsync(buffer, 0, buffer.Length);
+                NetworkStream? stream = null;
+                try
+                {
+                    stream = client.GetStream();
+                }
+                catch (Exception ex)
+                {
+                    Console.WriteLine($"Error obteniendo el stream para el cliente: {ex.Message}");
+                }
+
+                if (stream != null)
+                {
+                    try
+                    {
+                        await stream.WriteAsync(buffer, 0, buffer.Length);
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine($"Error escribiendo al stream: {ex.Message}");
+                    }
+                }
             }
         }
     }

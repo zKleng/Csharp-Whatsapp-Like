@@ -5,13 +5,6 @@ class Program
 {
     static async Task Main(string[] args)
     {
-        // Imprimir argumentos para verificación
-        Console.WriteLine("Argumentos recibidos:");
-        foreach (var arg in args)
-        {
-            Console.WriteLine(arg);
-        }
-
         if (args.Length < 2 || string.IsNullOrEmpty(args[0]) || string.IsNullOrEmpty(args[1]))
         {
             Console.WriteLine("Uso: dotnet run <modo> <puerto>");
@@ -37,14 +30,6 @@ class Program
 
             while (true)
             {
-                Console.Write("Ingrese el puerto de destino: ");
-                string? targetPortInput = Console.ReadLine();
-                if (targetPortInput == null || !int.TryParse(targetPortInput, out int targetPort))
-                {
-                    Console.WriteLine("El puerto de destino debe ser un número entero.");
-                    continue;
-                }
-
                 Console.Write("Ingrese el mensaje: ");
                 string? message = Console.ReadLine();
                 if (string.IsNullOrWhiteSpace(message))
@@ -54,7 +39,7 @@ class Program
                 }
 
                 await client.SendMessageAsync(message);
-                Console.WriteLine($"Mensaje enviado a puerto {targetPort}: {message}");
+                Console.WriteLine($"Mensaje enviado: {message}");
             }
         }
         else
