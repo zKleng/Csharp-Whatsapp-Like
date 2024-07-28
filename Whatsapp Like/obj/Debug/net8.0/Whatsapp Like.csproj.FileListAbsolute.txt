@@ -1,0 +1,15 @@
+C:\Users\j2005\OneDrive\Documentos\GitHub\Csharp-Whatsapp-Like\Whatsapp Like\bin\Debug\net8.0\Whatsapp Like.exe
+C:\Users\j2005\OneDrive\Documentos\GitHub\Csharp-Whatsapp-Like\Whatsapp Like\bin\Debug\net8.0\Whatsapp Like.deps.json
+C:\Users\j2005\OneDrive\Documentos\GitHub\Csharp-Whatsapp-Like\Whatsapp Like\bin\Debug\net8.0\Whatsapp Like.runtimeconfig.json
+C:\Users\j2005\OneDrive\Documentos\GitHub\Csharp-Whatsapp-Like\Whatsapp Like\bin\Debug\net8.0\Whatsapp Like.dll
+C:\Users\j2005\OneDrive\Documentos\GitHub\Csharp-Whatsapp-Like\Whatsapp Like\bin\Debug\net8.0\Whatsapp Like.pdb
+C:\Users\j2005\OneDrive\Documentos\GitHub\Csharp-Whatsapp-Like\Whatsapp Like\obj\Debug\net8.0\Whatsapp Like.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\j2005\OneDrive\Documentos\GitHub\Csharp-Whatsapp-Like\Whatsapp Like\obj\Debug\net8.0\Whatsapp Like.AssemblyInfoInputs.cache
+C:\Users\j2005\OneDrive\Documentos\GitHub\Csharp-Whatsapp-Like\Whatsapp Like\obj\Debug\net8.0\Whatsapp Like.AssemblyInfo.cs
+C:\Users\j2005\OneDrive\Documentos\GitHub\Csharp-Whatsapp-Like\Whatsapp Like\obj\Debug\net8.0\Whatsapp Like.csproj.CoreCompileInputs.cache
+C:\Users\j2005\OneDrive\Documentos\GitHub\Csharp-Whatsapp-Like\Whatsapp Like\obj\Debug\net8.0\Whatsapp Like.sourcelink.json
+C:\Users\j2005\OneDrive\Documentos\GitHub\Csharp-Whatsapp-Like\Whatsapp Like\obj\Debug\net8.0\Whatsapp Like.dll
+C:\Users\j2005\OneDrive\Documentos\GitHub\Csharp-Whatsapp-Like\Whatsapp Like\obj\Debug\net8.0\refint\Whatsapp Like.dll
+C:\Users\j2005\OneDrive\Documentos\GitHub\Csharp-Whatsapp-Like\Whatsapp Like\obj\Debug\net8.0\Whatsapp Like.pdb
+C:\Users\j2005\OneDrive\Documentos\GitHub\Csharp-Whatsapp-Like\Whatsapp Like\obj\Debug\net8.0\Whatsapp Like.genruntimeconfig.cache
+C:\Users\j2005\OneDrive\Documentos\GitHub\Csharp-Whatsapp-Like\Whatsapp Like\obj\Debug\net8.0\ref\Whatsapp Like.dll

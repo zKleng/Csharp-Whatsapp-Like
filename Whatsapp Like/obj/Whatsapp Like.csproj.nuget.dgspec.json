@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\j2005\\OneDrive\\Documentos\\Trabajos TEC\\Estructura de Datos I\\TE\\TE#1\\Whatsapp Like\\source\\Whatsapp-like\\Whatsapp-like.csproj": {}
+    "C:\\Users\\j2005\\OneDrive\\Documentos\\GitHub\\Csharp-Whatsapp-Like\\Whatsapp Like\\Whatsapp Like.csproj": {}
   },
   "projects": {
-    "C:\\Users\\j2005\\OneDrive\\Documentos\\Trabajos TEC\\Estructura de Datos I\\TE\\TE#1\\Whatsapp Like\\source\\Whatsapp-like\\Whatsapp-like.csproj": {
+    "C:\\Users\\j2005\\OneDrive\\Documentos\\GitHub\\Csharp-Whatsapp-Like\\Whatsapp Like\\Whatsapp Like.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\j2005\\OneDrive\\Documentos\\Trabajos TEC\\Estructura de Datos I\\TE\\TE#1\\Whatsapp Like\\source\\Whatsapp-like\\Whatsapp-like.csproj",
-        "projectName": "Whatsapp-like",
-        "projectPath": "C:\\Users\\j2005\\OneDrive\\Documentos\\Trabajos TEC\\Estructura de Datos I\\TE\\TE#1\\Whatsapp Like\\source\\Whatsapp-like\\Whatsapp-like.csproj",
+        "projectUniqueName": "C:\\Users\\j2005\\OneDrive\\Documentos\\GitHub\\Csharp-Whatsapp-Like\\Whatsapp Like\\Whatsapp Like.csproj",
+        "projectName": "Whatsapp Like",
+        "projectPath": "C:\\Users\\j2005\\OneDrive\\Documentos\\GitHub\\Csharp-Whatsapp-Like\\Whatsapp Like\\Whatsapp Like.csproj",
         "packagesPath": "C:\\Users\\j2005\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\j2005\\OneDrive\\Documentos\\Trabajos TEC\\Estructura de Datos I\\TE\\TE#1\\Whatsapp Like\\source\\Whatsapp-like\\obj\\",
+        "outputPath": "C:\\Users\\j2005\\OneDrive\\Documentos\\GitHub\\Csharp-Whatsapp-Like\\Whatsapp Like\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\j2005\\AppData\\Roaming\\NuGet\\NuGet.Config"
