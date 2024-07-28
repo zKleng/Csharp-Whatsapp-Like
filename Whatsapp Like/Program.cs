@@ -5,6 +5,13 @@ class Program
 {
     static async Task Main(string[] args)
     {
+        // Imprimir argumentos para verificación
+        Console.WriteLine("Argumentos recibidos:");
+        foreach (var arg in args)
+        {
+            Console.WriteLine(arg);
+        }
+
         if (args.Length < 2 || string.IsNullOrEmpty(args[0]) || string.IsNullOrEmpty(args[1]))
         {
             Console.WriteLine("Uso: dotnet run <modo> <puerto>");
